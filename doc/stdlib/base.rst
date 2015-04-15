@@ -32,6 +32,12 @@ Getting Around
 
    Register a zero-argument function to be called at exit.
 
+.. function:: atreplinit(f)
+
+   Register a one-argument function to be called before the REPL interface is initialized in interactive sessions.
+   The argument of ``f`` is the REPL object.
+   This is can be called from within the .juliarc.jl initialization file to customize the REPL.
+
 .. function:: isinteractive() -> Bool
 
    Determine whether Julia is running an interactive session.
